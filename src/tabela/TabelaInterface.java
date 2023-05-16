@@ -16,6 +16,12 @@ public interface TabelaInterface {
 
     public Item buscar(String chave);
 
+    public Item buscaAVL(String chave);
+
+    public Item buscaTreeB(String chave);
+
+    public Item buscaTreeRubro(String chave);
+
 
     public void dobrarTabela();
 
