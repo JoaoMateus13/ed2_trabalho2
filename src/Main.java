@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello world!");
 
 
-        TabelaHashLista tabelaHashLista = new TabelaHashLista(2);
+        TabelaHashLista tabelaHashLista = new TabelaHashLista(10);
 
 
         tabelaHashLista.inserir(new Item("d1", "str", "dois",

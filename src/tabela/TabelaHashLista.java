@@ -84,7 +84,7 @@ public class TabelaHashLista implements TabelaInterface{
             items.add(o);
             size++;
         }
-        if(this.size> M){
+        if(this.size/M >= 0.75){
             resize();
         }
     }
@@ -119,10 +119,7 @@ public class TabelaHashLista implements TabelaInterface{
     @Override
     public Item buscaTreeRubro(String chave) {
         return null;
-    }
-
-    @Override
-    public void dobrarTabela() {
 
     }
+
 }

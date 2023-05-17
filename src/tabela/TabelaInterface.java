@@ -23,6 +23,6 @@ public interface TabelaInterface {
     public Item buscaTreeRubro(String chave);
 
 
-    public void dobrarTabela();
+    public void resize();
 
 }
