@@ -1,13 +1,17 @@
 import objeto.Item;
+import tabela.Status;
 import tabela.TabelaHashLista;
 
 import java.time.LocalDateTime;
+
+import static tabela.Status.OCUPADO;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
 
+/*
         TabelaHashLista tabelaHashLista = new TabelaHashLista(10);
 
 
@@ -54,6 +58,13 @@ public class Main {
                 122, LocalDateTime.now(), LocalDateTime.now()));
         tabelaHashLista.inserir(new Item("d17", "str", "dois",
                 122, LocalDateTime.now(), LocalDateTime.now()));
+*/
+
+
+        Status[] stats = new Status[2];
+        stats[1] = Status.REMOVIDO;
+
+        System.out.println(stats[1].compareTo(OCUPADO));
 
 
 
