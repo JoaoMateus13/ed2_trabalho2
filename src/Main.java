@@ -1,6 +1,7 @@
 import objeto.Item;
 import tabela.Status;
 import tabela.TabelaHashLista;
+import tabela.TabelaHashQuadra;
 
 import java.time.LocalDateTime;
 
@@ -61,12 +62,61 @@ public class Main {
 */
 
 
-        Status[] stats = new Status[2];
-        stats[1] = Status.REMOVIDO;
+        /*Status[] stats = new Status[2];
+        stats[1] = OCUPADO;
 
-        System.out.println(stats[1].compareTo(OCUPADO));
+        System.out.println(stats[1].equals(OCUPADO));
 
 
+*/
+
+        TabelaHashQuadra tabelaHashQuadra = new TabelaHashQuadra(10);
+
+
+
+        tabelaHashQuadra.inserir(new Item("d1", "str", "dois",
+                122,LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d2", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+
+        tabelaHashQuadra.inserir(new Item("d3", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d4", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d5", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d6", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d7", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d8", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+
+        tabelaHashQuadra.inserir(new Item("d9", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d10", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d11", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d12", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d13", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d14", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d15", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d16", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
+        tabelaHashQuadra.inserir(new Item("d17", "str", "dois",
+                122, LocalDateTime.now(), LocalDateTime.now()));
 
 
 

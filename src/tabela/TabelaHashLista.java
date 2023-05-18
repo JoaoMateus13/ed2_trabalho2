@@ -47,10 +47,10 @@ public class TabelaHashLista implements TabelaInterface{
 
 
             for(int i = 0; i<M; i++){
-                ArrayList<Item> items = this.tabela[i];
-                if (items!=null) {
-                    for (int j = 0; j < items.size(); j++) {
-                            novaTabela.inserir(items.get(j));
+                ArrayList<Item> itens = this.tabela[i];
+                if (itens!=null) {
+                    for (int j = 0; j < itens.size(); j++) {
+                            novaTabela.inserir(itens.get(j));
                         }
                     }
                 }
@@ -66,22 +66,22 @@ public class TabelaHashLista implements TabelaInterface{
     @Override
     public void inserir(Item o) {
         int hash = hash(o.getNome());
-        ArrayList<Item> items = this.tabela[hash];
+        ArrayList<Item> itens = this.tabela[hash];
 
-        if (items == null){
-            items = new ArrayList<Item>();
-            items.add(o);
+        if (itens == null){
+            itens = new ArrayList<Item>();
+            itens.add(o);
             size++;
-            this.tabela[hash] = items;
+            this.tabela[hash] = itens;
         }
         else {
-            for(int i = 0; i<items.size(); i++){
-                if(Objects.equals(items.get(i).getNome(), o.getNome())){
-                    items.set(i, o); //atualiza o item
+            for(int i = 0; i<itens.size(); i++){
+                if(Objects.equals(itens.get(i).getNome(), o.getNome())){
+                    itens.set(i, o); //atualiza o item
                     return;
                 }
             }
-            items.add(o);
+            itens.add(o);
             size++;
         }
         if(this.size/M >= 0.75){
@@ -92,12 +92,12 @@ public class TabelaHashLista implements TabelaInterface{
     @Override
     public Item buscar(String chave) {
         int hash = hash(chave);
-        ArrayList<Item> items = this.tabela[hash];
+        ArrayList<Item> itens = this.tabela[hash];
 
-        if (items == null)
+        if (itens == null)
             return null;
 
-        for (Item item : items) {
+        for (Item item : itens) {
             if (item.getNome().equals(chave))
                 return item;
         }
