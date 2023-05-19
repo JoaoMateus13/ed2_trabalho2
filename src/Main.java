@@ -3,6 +3,7 @@ import tabela.Status;
 import tabela.TabelaHashLista;
 import tabela.TabelaHashQuadra;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.time.LocalDateTime;
 
 import static tabela.Status.OCUPADO;
@@ -70,7 +71,7 @@ public class Main {
 
 */
 
-        TabelaHashQuadra tabelaHashQuadra = new TabelaHashQuadra(10);
+        TabelaHashQuadra tabelaHashQuadra = new TabelaHashQuadra(4);
 
 
 
@@ -124,6 +125,11 @@ public class Main {
 /*        System.out.println(tabelaHashLista.hash("d"));
 
         System.out.println(tabelaHashLista.buscar("d").toString());*/
+
+
+        tabelaHashQuadra.buscar("TT");
+
+        System.out.println(tabelaHashQuadra.buscar("TT"));
 
     }
 

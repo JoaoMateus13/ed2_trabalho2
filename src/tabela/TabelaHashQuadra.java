@@ -51,8 +51,8 @@ public class TabelaHashQuadra implements TabelaInterface{
         int i;
         int k = 0;
         int hashQ;
-       // if (size >= M/2)
-         //   resize(2*M); // double M
+        if (size >= M/2)
+            resize(); // double M
 
         for (i=0,hashQ = 0; chave[hashQ] != null;
              i++,hashQ =hashQuadratica(o.getNome(),i))
@@ -67,12 +67,24 @@ public class TabelaHashQuadra implements TabelaInterface{
         itens[hashQ] = o;
         stats[hashQ] = OCUPADO;
         size++;
+
     }
 
     @Override
-    public Item buscar(String chave) {
-        return null;
-    }
+    public Item buscar(String chavev) {
+            int i;
+            int hashQ;
+
+            for (i=0,hashQ = 0; chave[hashQ] != null;
+                 i++,hashQ = hashQuadratica(chavev,i))
+
+                if (chave[hashQ].equals(chavev)) {
+                    return itens[hashQ];
+                }
+
+            return null;
+
+        }
 
     @Override
     public Item buscaAVL(String chave) {
@@ -93,5 +105,20 @@ public class TabelaHashQuadra implements TabelaInterface{
     @Override
     public void resize() {
 
+        int i;
+        int hashQ;
+
+        TabelaHashQuadra temp;
+        temp = new TabelaHashQuadra(this.M*2);
+
+        for (i=0; i<M; i++){
+
+            if (chave[i] != null)
+                temp.inserir(itens[i]);
+        }
+        chave = temp.chave;
+        itens = temp.itens;
+        stats = temp.stats;
+        M = temp.M;
     }
 }
