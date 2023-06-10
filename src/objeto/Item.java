@@ -1,16 +1,18 @@
 package objeto;
 
+import java.text.DateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Item {
     private String nome;
     private String caminho;
     private String tipo;
-    private long tamanho;
-    private LocalDateTime dataCriacao;
-    private LocalDateTime dataModificacao;
+    private double tamanho;
+    private Date dataCriacao;
+    private Date dataModificacao;
 
-    public Item(String nome, String caminho, String tipo, long tamanho, LocalDateTime dataCriacao, LocalDateTime dataModificacao) {
+    public Item(String nome, String caminho, String tipo, double tamanho, Date dataCriacao, Date dataModificacao) {
         this.nome = nome;
         this.caminho = caminho;
         this.tipo = tipo;
@@ -43,27 +45,27 @@ public class Item {
         this.tipo = tipo;
     }
 
-    public long getTamanho() {
+    public double getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(long tamanho) {
+    public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
     }
 
-    public LocalDateTime getDataCriacao() {
+    public Date getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(LocalDateTime dataCriacao) {
+    public void setDataCriacao(Date dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 
-    public LocalDateTime getDataModificacao() {
+    public Date getDataModificacao() {
         return dataModificacao;
     }
 
-    public void setDataModificacao(LocalDateTime dataModificacao) {
+    public void setDataModificacao(Date dataModificacao) {
         this.dataModificacao = dataModificacao;
     }
 
