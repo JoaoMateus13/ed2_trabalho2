@@ -5,7 +5,7 @@ import objeto.Item;
 public interface TabelaInterface {
 
 
-    public int hash(String chave);
+    public int hash(Object chave);
 
 
     public boolean cheia();
@@ -14,7 +14,7 @@ public interface TabelaInterface {
     public void inserir(Item o);
 
 
-    public Item buscar(String chave);
+    public Object buscar(Object chave);
 
     public Item buscaAVL(String chave);
 

@@ -69,8 +69,8 @@ public class BITree<Key extends Comparable<Key>, Value> {
 
     private void percorrerEmOrdemRecursivamente(No raiz) {
         if (raiz != null) {
-            System.out.println(raiz.valor.toString());
             percorrerEmOrdemRecursivamente(raiz.esquerda);
+            System.out.println(raiz.valor.toString());
             percorrerEmOrdemRecursivamente(raiz.direita);
         }
     }

@@ -1,7 +1,7 @@
 package objeto;
 
-import java.text.DateFormat;
-import java.time.LocalDateTime;
+import org.testng.mustache.Value;
+
 import java.util.Date;
 
 public class Item {
@@ -67,6 +67,20 @@ public class Item {
 
     public void setDataModificacao(Date dataModificacao) {
         this.dataModificacao = dataModificacao;
+    }
+
+    public Comparable retornarChave(objOrdem ordenarPor) {
+
+        if (ordenarPor == objOrdem.PORNOME) {
+            return getNome();
+        } else if (ordenarPor == objOrdem.PORTIPO) {
+            return getTipo();
+        } else if(ordenarPor == objOrdem.PORDATADECRIACAO) {
+            return getDataCriacao();
+        }
+        else if(ordenarPor == objOrdem.PORTAMANHO) {
+            return getTamanho();
+        }else return getDataModificacao();
     }
 
     @Override

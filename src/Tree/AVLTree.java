@@ -223,8 +223,8 @@ public class AVLTree<Key extends Comparable<Key>, Value> {
     // Caminha pela subárvore em pré-ordem
     private void view(Node no) {
         if(no == null) return;
-        System.out.println(no.valor.toString());
         view(no.esq);
+        System.out.println(no.valor.toString());
         view(no.dir);
     }
 

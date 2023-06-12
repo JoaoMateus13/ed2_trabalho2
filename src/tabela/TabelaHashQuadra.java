@@ -29,13 +29,13 @@ public class TabelaHashQuadra implements TabelaInterface{
 
 
     @Override
-    public int hash(String chave) {
+    public int hash(Object chave) {
 
         return (((chave.hashCode()&0x7fffffff)% M));
     }
 
 
-    public int hashQuadratica(String chave, int i){
+    public int hashQuadratica(Object chave, int i){
         int hashQuadratica = ((hash(chave)) + 2*i + 5*i*i)%M;
         return hashQuadratica;
     }
@@ -71,7 +71,7 @@ public class TabelaHashQuadra implements TabelaInterface{
     }
 
     @Override
-    public Item buscar(String chavev) {
+    public Item buscar(Object chavev) {
             int i;
             int hashQ;
 

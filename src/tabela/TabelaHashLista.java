@@ -24,7 +24,7 @@ public class TabelaHashLista implements TabelaInterface{
     }
 
     @Override
-    public int hash(String chave) {
+    public int hash(Object chave) {
         return ((chave.hashCode()&0x7fffffff)% tabela.length);
     }
 
@@ -89,8 +89,9 @@ public class TabelaHashLista implements TabelaInterface{
         }
     }
 
+
     @Override
-    public Item buscar(String chave) {
+    public Item buscar(Object chave) {
         int hash = hash(chave);
         ArrayList<Item> itens = this.tabela[hash];
 

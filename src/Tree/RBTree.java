@@ -163,8 +163,8 @@ public class RBTree<Key extends Comparable<Key>, Value>
 	// Caminha na árvore em pré-ordem e imprime cada elemento
 	private void view(Node no) {
 		if(no == null) return;
-		System.out.println(no.valor.toString());
 		view(no.esq);
+		System.out.println(no.valor.toString());
 		view(no.dir);
 	}
 
